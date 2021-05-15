@@ -3,7 +3,6 @@
 # Plantilla de ejercicio
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
-
 from tp4_ej1 import ingreso_numero
 
 def suma_lenta():
@@ -22,7 +21,6 @@ def suma_lenta():
             contador -=1
     print(f"El resultado es: {resultado}")
     
-
 def prueba():
     suma_lenta()
     pass
