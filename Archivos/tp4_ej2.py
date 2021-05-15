@@ -20,7 +20,7 @@ def suma_lenta():
             resultado -= 1
             contador -=1
     print(f"El resultado es: {resultado}")
-    
+
 def prueba():
     suma_lenta()
     pass

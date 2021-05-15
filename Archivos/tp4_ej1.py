@@ -3,7 +3,6 @@
 # Plantilla de ejercicio
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
-
 def ingreso_numero(mensaje):
     while True:
         ingreso=input(mensaje)
@@ -14,9 +13,7 @@ def ingreso_numero(mensaje):
                 break
         except ValueError:
             print(f"({ingreso}) no es un numero!")
-            print("")
-            
-        
+            print("")    
 
 def ingreso_numero_limite():
     print("Ingrese los valores limites")
@@ -31,8 +28,6 @@ def ingreso_numero_limite():
             print(f"({entero}) no esta dentro del rango")
             print("")
             continue
-
-
 
 def prueba():
     ingreso_numero_limite()
