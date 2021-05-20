@@ -2,12 +2,7 @@
 # Mauricio Boyé - @MauriBoye
 # Plantilla de ejercicio
 # UNRN Andina - Introducción a la Ingenieria en Computación
-################################
-# Mauricio Boyé - @MauriBoye
-# Plantilla de ejercicio
-# UNRN Andina - Introducción a la Ingenieria en Computación
 ################
-
 """
 Primer ejercicio
 """
