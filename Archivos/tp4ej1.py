@@ -13,7 +13,7 @@ class IngresoIncorrecto(Exception):
 
 def ingreso_numero(mensaje):
     """
-    Esta funcion muestra un mensaje y agrega la # para indicar el ingreso
+    Esta funcion muestra un mensaje para indicar el ingreso
     de un número entero.
     """
     ingreso=input(mensaje)
@@ -25,24 +25,29 @@ def ingreso_numero(mensaje):
     return entero    
 
 def ingreso_numero_limite(mensaje,minimo=0,maximo=10):
+    """
+    Esta funcion muestra un mensaje para indicar el ingreso
+    de un número entero entre dos valores limites.
+    """
     print(mensaje)
     print(f"Minimo: {minimo}")
     print(f"Maximo: {maximo}")
-    while True:
-        entero=ingreso_numero("Ingrese un numero: ")
-        if entero > minimo and entero < maximo:
-            break
-        else:
-            raise IngresoIncorrecto(f"'{entero}' no esta dentro del rango!")
-        return entero
+    entero=ingreso_numero("Ingrese un numero: ")
+    if entero < minimo or entero > maximo:
+        raise IngresoIncorrecto(f"'{entero}' no esta dentro del rango!")
+    return entero
 
 def ingreso_numero_reintento(mensaje, cantidad_reintentos=5):
+    """
+    Esta funcion muestra un mensaje para indicar el ingreso
+    de un número entero con una determinada cantidad de reintentos.
+    """
     intentos= cantidad_reintentos
     while intentos>0:
         try:
             return ingreso_numero(mensaje)
         except IngresoIncorrecto:
-            intentos-=1
+            intentos = intentos - 1
             print(f"Valor incorrecto, le queda {intentos} intentos")
             print("")
     raise IngresoIncorrecto("Se acabaron los intentos disponibles")
