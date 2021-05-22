@@ -53,12 +53,13 @@ def ingreso_numero_reintento(mensaje, cantidad_reintentos=5):
         
 def marco(texto):
     """
-    Esta funcion crea un marco de 80 "-" a un texto deseado
+    Esta funcion crea un marco a un texto deseado
     """
-    print("")
-    print("-"*80)
-    print(texto)
-    print("-"*80)
+    print("\n"+"╴"*80)
+    print("╔"+"═"*len(texto)+"╗")
+    print(f"║{texto}║")
+    print("╚"+"═"*len(texto)+"╝")
+    print("╴"*80)
     
 def prueba():
     marco("ingreso_numero()")
