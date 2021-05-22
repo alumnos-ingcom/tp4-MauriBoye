@@ -8,15 +8,12 @@ Segundo ejercicio
 """
 import tp4ej1
 
-def suma_lenta(numero1=1,numero2=2):
+def suma_lenta(numero1,numero2):
     """
     Esta funcion pide el ingreso de 2 numeros para indicar la
     suma entre ellos sin hacer la operacion de manera directa.
     """
-    print("Suma lenta de dos numeros")
     try:
-        numero1= int(numero1)
-        numero2= int(numero2)
         contador=0
         resultado=numero1
         if numero2 > 0:
@@ -29,15 +26,15 @@ def suma_lenta(numero1=1,numero2=2):
                 contador = contador - 1
     except ValueError:
         raise tp4ej1.IngresoIncorrecto(f"Eso no es un número!")
-    print (f"({numero1})+({numero2})= {resultado}")
     return resultado
 
 def prueba():
-    print ("-----------------------------------------------------------------------------------")
-    print ("suma_lenta()")
-    print ("-----------------------------------------------------------------------------------")
-    suma_lenta(3,4)
-    pass
+    tp4ej1.marco("suma_lenta()")
+    print("Suma lenta de dos numeros")
+    numero1=3
+    numero2=-5
+    resultado=suma_lenta(numero1,numero2)
+    print(f"({numero1})+({numero2})= {resultado}")
 
 if __name__ == "__main__":
     prueba()
