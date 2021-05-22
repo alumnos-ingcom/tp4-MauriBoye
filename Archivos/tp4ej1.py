@@ -51,18 +51,21 @@ def ingreso_numero_reintento(mensaje, cantidad_reintentos=5):
             print(f"Valor incorrecto, le queda {intentos} intentos \n")
     raise IngresoIncorrecto("Se acabaron los intentos disponibles")
         
+def marco(texto):
+    """
+    Esta funcion crea un marco de 80 "-" a un texto deseado
+    """
+    print("")
+    print("-"*80)
+    print(texto)
+    print("-"*80)
+    
 def prueba():
-    print ("-----------------------------------------------------------------------------------")
-    print ("ingreso_numero()")
-    print ("-----------------------------------------------------------------------------------")
+    marco("ingreso_numero()")
     ingreso_numero("Ingrese un numero: ")
-    print ("\n-----------------------------------------------------------------------------------")
-    print ("ingreso_numero_limite()")
-    print ("-----------------------------------------------------------------------------------")
+    marco("ingreso_numero_limite()")
     ingreso_numero_limite("Ingrese un numero entero entre los valores límites")
-    print ("\n-----------------------------------------------------------------------------------")
-    print ("ingreso_numero_reintento()")
-    print ("-----------------------------------------------------------------------------------")
+    marco("ingreso_numero_reintento()")
     ingreso_numero_reintento("Ingrese un numero: ")
 
 if __name__ == "__main__":
