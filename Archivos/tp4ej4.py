@@ -12,21 +12,18 @@ def comparacion(numero1,numero2):
     """
     Esta funcion pide el ingreso dos numeros y los compara
     """
-    try:
-        if numero1 < numero2:
-            return -1
-        elif numero1 == numero2:
-            return 0
-        elif numero1 > numero2:
-            return 1
-    except ValueError:
-        raise tp4ej1.IngresoIncorrecto(f"Eso no es un número!")
+    if numero1 < numero2:
+        return -1
+    elif numero1 == numero2:
+        return 0
+    elif numero1 > numero2:
+        return 1
 
 def prueba():
     tp4ej1.marco("comparacion()")
     print("Comparación entre 2 números")
-    numero1 = 1
-    numero2 = 2
+    numero1 = tp4ej1.ingreso_numero("Ingrese el 1er numero: ")
+    numero2 = tp4ej1.ingreso_numero("Ingrese el 2do numero: ")
     resultado = comparacion(numero1,numero2)
     if resultado == -1:
         print (f"{numero1} es menor que {numero2}")
