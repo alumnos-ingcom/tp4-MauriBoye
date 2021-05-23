@@ -22,13 +22,13 @@ def division_lenta(dividendo, divisor):
     return lista
 
 def prueba():
-    dividendo = 28
-    divisor = 7
     tp4ej1.marco("division_lenta()")
     print("Resta sucesiva\n")
-    lista = division_lenta(dividendo,divisor)
-    print(f"{dividendo}/{divisor}= {lista[0]}\n"
-          f"Resto= {lista[1]}")
+    dividendo = tp4ej1.ingreso_numero("Ingrese el dividendo: ")
+    divisor = tp4ej1.ingreso_numero("Ingrese el divisor: ")
+    cociente, resto = division_lenta(dividendo,divisor)
+    print(f"{dividendo}/{divisor}= {cociente}\n"
+          f"Resto= {resto}")
 
 if __name__ == "__main__":
     prueba()
