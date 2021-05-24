@@ -1,5 +1,5 @@
 ################
-# Martín René - @martinvilu
+# Mauricio Boyé - @MauriBoye
 # Plantilla de ejercicio
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
