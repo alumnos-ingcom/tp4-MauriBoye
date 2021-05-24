@@ -8,6 +8,18 @@ Tercer ejercicio
 """
 import tp4ej1
 
+def ingreso_numero_decimal(mensaje):
+    """
+    Esta funcion muestra un mensaje para indicar el ingreso
+    de un número decimal.
+    """
+    ingreso=input(mensaje)
+    try:
+        entero=float(ingreso)
+    except ValueError as err:
+        raise IngresoIncorrecto(f"'{ingreso}' no es un número!") from err
+    return entero    
+
 def convertir_a_fahrrenheit(centigrados):
     """
     Esta funcion pide el ingreso de una temperatura en centigrados
@@ -33,12 +45,12 @@ def convertir_a_centigrados(fahrrenheit):
 def prueba():
     tp4ej1.marco("convertir_a_fahrrenheit()")
     print ("Conversion de centigrados a fahrrenheit")
-    centigrados = 24
+    centigrados = ingreso_numero_decimal("Ingreso un valor en centigrados: ")
     fahrrenheit = convertir_a_fahrrenheit(centigrados)
     print (f"{centigrados}°C son {fahrrenheit}°F")
     tp4ej1.marco("convertir_a_centigrados()")
     print ("Conversion de fahrrenheit a centigrados")
-    fahrrenheit = 75.2
+    fahrrenheit = ingreso_numero_decimal("Ingreso un valor en fahrrenheit: ")
     centigrados = convertir_a_centigrados(fahrrenheit)
     print (f"{fahrrenheit}°F son {centigrados}°C")
 
