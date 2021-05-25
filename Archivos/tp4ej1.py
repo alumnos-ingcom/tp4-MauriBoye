@@ -1,4 +1,4 @@
-################
+###############
 # Mauricio Boyé - @MauriBoye
 # Plantilla de ejercicio
 # UNRN Andina - Introducción a la Ingenieria en Computación
@@ -19,7 +19,6 @@ def ingreso_numero(mensaje):
     ingreso=input(mensaje)
     try:
         entero=int(ingreso)
-        print("Todo bien master")
     except ValueError as err:
         raise IngresoIncorrecto(f"'{ingreso}' no es un número!") from err
     return entero    
