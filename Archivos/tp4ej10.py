@@ -3,10 +3,16 @@
 # Plantilla de ejercicio
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
+"""
+Decimo ejercicio
+"""
 import tp4ej1
 import tp4ej9
 
 def factores_primos(numero):
+    """
+    Esta funcion pide el ingreso de un numero y devuelve sus factores primos
+    """
     i=1
     tupla_factor_primo=()
     factor_primo=[1]
